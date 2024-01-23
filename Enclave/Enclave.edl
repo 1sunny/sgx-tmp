@@ -1,0 +1,21 @@
+enclave {
+    include "group.h"
+    trusted {
+        public int gr_open (int mode);
+        public void gr_locate ([in, string] const char *name, [user_check] void *tmp);
+        public int gr_update ([in] const struct group *gr);
+        public int gr_close (void);
+        public void set_gr_content([in, string] const char* s);
+    };
+
+    /* 
+     * ocall_print_string - invokes OCALL to display string buffer inside the enclave.
+     *  [in]: copy the string buffer to App outside.
+     *  [string]: specifies 'str' is a NULL terminated buffer.
+     */
+    untrusted {
+        void ocall_print_string([in, string] const char *str);
+        void ocall_print_all_group([in, string] const char *str);
+    };
+
+};

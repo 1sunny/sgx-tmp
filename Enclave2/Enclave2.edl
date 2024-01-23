@@ -1,0 +1,20 @@
+enclave {
+    include "gshadow_.h"
+    trusted {
+        public int sgr_open (int mode);
+        public void sgr_locate ([in, string] const char *name, [user_check] void *tmp);
+        public int sgr_update ([in] const struct sgrp *sg); 
+        public int sgr_close (void);
+        public void set_sgr_content([in, string] char* s);
+    };
+    /* 
+     * ocall_print_string - invokes OCALL to display string buffer inside the enclave.
+     *  [in]: copy the string buffer to App outside.
+     *  [string]: specifies 'str' is a NULL terminated buffer.
+     */
+    untrusted {
+        void ocall_print_string([in, string] const char *str);
+        void ocall_print_all_sgroup([in, string] const char *str);
+    };
+
+};

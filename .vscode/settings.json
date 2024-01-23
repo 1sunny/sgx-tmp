@@ -1,0 +1,35 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/opt/alibaba/teesdk/intel/sgxsdk/SampleCode/SampleEnclave",
+            "binaryPath": "/opt/alibaba/teesdk/intel/sgxsdk/SampleCode/SampleEnclave/app",
+            "binaryArgs": []
+        },
+        {
+            "cwd": "/opt/alibaba/teesdk/intel/sgxsdk/SampleCode/01",
+            "binaryPath": "/opt/alibaba/teesdk/intel/sgxsdk/SampleCode/01/app",
+            "binaryArgs": []
+        }
+    ],
+    "files.associations": {
+        "sgx_trts.h": "c",
+        "enclave2_u.h": "c",
+        "string.h": "c",
+        "enclave2_t.h": "c",
+        "stddef.h": "c",
+        "app.h": "c",
+        "enclave2.h": "c",
+        "prototypes.h": "c",
+        "memzero.h": "c",
+        "stdlib.h": "c",
+        "stdio.h": "c",
+        "enclave_t.h": "c",
+        "unistd.h": "c",
+        "alloc.h": "c",
+        "enclave_u.h": "c",
+        "defines.h": "c",
+        "crypt.h": "c",
+        "print.h": "c",
+        "config.h": "c"
+    }
+}
